@@ -1,17 +1,21 @@
+package com.employeeData;
+
 /**
  * Created by edwardbenzenberg on 6/12/17.
  */
 public class Executive extends Employee{
 
+    // declare variables/fields
     private double currentStockPrice;
 
+    // constructor
     public Executive(String firstName, String lastName, double monthlySalary, double currentStockPrice) {
 
         super(firstName, lastName, monthlySalary);
         this.currentStockPrice = currentStockPrice;
-
     }
 
+    @Override
     protected double annualSalary(){
 
         // declare local variables
@@ -25,6 +29,7 @@ public class Executive extends Employee{
         return annualSalary;
     }
 
+    @Override
     public String toString(){
         return super.toString() + String.format("\nCurrent Stock Price: %s", super.formatter.format(currentStockPrice));
     }

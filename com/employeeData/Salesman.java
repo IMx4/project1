@@ -1,8 +1,11 @@
+package com.employeeData;
+
 /**
  * Created by edwardbenzenberg on 6/12/17.
  */
 public class Salesman extends Employee {
-    // declare variables
+
+    // declare variables/fields
     private double annualSales;
 
     // constructor
@@ -11,6 +14,7 @@ public class Salesman extends Employee {
         this.annualSales = annualSales;
     }
 
+    @Override
     protected double annualSalary(){
 
         // declare local variables
@@ -28,6 +32,7 @@ public class Salesman extends Employee {
         return annualSalary;
     } // end annualSalary method
 
+    @Override
     public String toString(){
 
         return super.toString() + String.format("\nAnnual Sales: %s", super.formatter.format(annualSales));

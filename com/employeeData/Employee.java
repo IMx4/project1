@@ -1,12 +1,15 @@
-import java.text.DecimalFormat;
+package com.employeeData;
 
 /**
  * Created by BPCT on 6/12/2017.
  */
+
+import java.text.DecimalFormat;
+
 public class Employee {
 
-    // declare variables
-    protected DecimalFormat formatter = new DecimalFormat("$#");
+    // declare variables/fields
+    protected static DecimalFormat formatter = new DecimalFormat("$#");
     private String firstName;
     private String lastName;
     private double monthlySalary;
@@ -19,8 +22,7 @@ public class Employee {
     }
 
     protected double annualSalary(){
-        double annualSalary = monthlySalary*12;
-        return annualSalary;
+        return monthlySalary*12;
     }
 
     public String toString(){
