@@ -1,8 +1,12 @@
 package com.employeeData;
 
-/**
- * Created by edwardbenzenberg on 6/12/17.
+/*
+ * File: Employee.java
+ * Author: Edward Benzenberg
+ * Date:
+ * Purpose: to create Salesman and provide methods for required parameters
  */
+
 public class Salesman extends Employee {
 
     // declare variables/fields
@@ -38,4 +42,4 @@ public class Salesman extends Employee {
         return super.toString() + String.format("\nAnnual Sales: %s", super.formatter.format(annualSales));
     }
 
-}
+} // end Salesman class

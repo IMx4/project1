@@ -1,12 +1,17 @@
-package com.employeeData; /**
- * Created by edwardbenzenberg on 6/12/17.
+package com.employeeData;
+
+/*
+ * File: Employee.java
+ * Author: Edward Benzenberg
+ * Date:
+ * Purpose: to read a file containing Employee data and create Employee objects from the data.
+ *          Assign Employees to arrays based on year, display employee data.
  */
 
 import java.io.*;
 import java.util.ArrayList;
 
 public class EmployeeData {
-
 
     private ArrayList<Employee> employees2014 = new ArrayList<>();
     private ArrayList<Employee> employees2015 = new ArrayList<>();
@@ -16,7 +21,7 @@ public class EmployeeData {
      */
     private void readFile() {
 
-        File employeeFile = new File("src/employeeInfo.txt");
+        File employeeFile = new File("com/employeeData/employeeInfo.txt");
         BufferedReader reader = null;
         String fileLine;
 
@@ -136,15 +141,15 @@ public class EmployeeData {
     private void outputData() {
 
         // Employees from year 2014
-        System.out.println("\nEmployees for year of 2014");
+        System.out.println("\n** Employees for year of 2014 **");
         for (Employee employee : employees2014) {
             System.out.println(employee);
-            System.out.println("Annual Salary:" + Employee.formatter.format(employee.annualSalary()));
+            System.out.println("Annual Salary: " + Employee.formatter.format(employee.annualSalary()));
         } // end for each
         System.out.println("\nAverage salary for 2014: " + Employee.formatter.format(averageSalary(employees2014)));
 
         //Employees from year 2015
-        System.out.println("\nEmployees for year of 2015");
+        System.out.println("\n** Employees for year of 2015 **");
         for (Employee employee : employees2015) {
             System.out.println(employee);
             System.out.println("Annual Salary: " + Employee.formatter.format(employee.annualSalary()));
@@ -159,7 +164,6 @@ public class EmployeeData {
     private void initialize() {
         readFile();
         outputData();
-
     }
 
     /*

@@ -1,7 +1,10 @@
 package com.employeeData;
 
-/**
- * Created by BPCT on 6/12/2017.
+/*
+ * File: Employee.java
+ * Author: Edward Benzenberg
+ * Date:
+ * Purpose: to create Employee objects and provide methods for required parameters
  */
 
 import java.text.DecimalFormat;
@@ -9,10 +12,10 @@ import java.text.DecimalFormat;
 public class Employee {
 
     // declare variables/fields
-    protected static DecimalFormat formatter = new DecimalFormat("$#");
     private String firstName;
     private String lastName;
     private double monthlySalary;
+    protected static DecimalFormat formatter = new DecimalFormat("$#");
 
     // constructor
     public Employee(String firstName, String lastName, double monthlySalary) {

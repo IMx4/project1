@@ -1,8 +1,12 @@
 package com.employeeData;
 
-/**
- * Created by edwardbenzenberg on 6/12/17.
+/*
+ * File: Employee.java
+ * Author: Edward Benzenberg
+ * Date:
+ * Purpose: to create Executive objects and provide methods for required parameters
  */
+
 public class Executive extends Employee{
 
     // declare variables/fields
