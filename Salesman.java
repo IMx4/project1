@@ -17,8 +17,7 @@ public class Salesman extends Employee {
         final float COMMISSION_MULTIPLYER = 0.2f;
         final int MAX_COMMISSION = 20000;
         double annualSalary = super.annualSalary();
-
-        double commission = (annualSales*COMMISSION_MULTIPLYER)+annualSales;
+        double commission = annualSales*COMMISSION_MULTIPLYER;
 
         if(commission > MAX_COMMISSION){
             commission = MAX_COMMISSION;
@@ -31,7 +30,7 @@ public class Salesman extends Employee {
 
     public String toString(){
 
-        return super.toString() + String.format("\nAnnual Sales: $%.0f", annualSales);
+        return super.toString() + String.format("\nAnnual Sales: %s", super.formatter.format(annualSales));
     }
 
 }

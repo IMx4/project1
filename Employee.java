@@ -6,6 +6,7 @@ import java.text.DecimalFormat;
 public class Employee {
 
     // declare variables
+    protected DecimalFormat formatter = new DecimalFormat("$#");
     private String firstName;
     private String lastName;
     private double monthlySalary;
@@ -18,15 +19,12 @@ public class Employee {
     }
 
     protected double annualSalary(){
-
-        return monthlySalary*52;
+        double annualSalary = monthlySalary*12;
+        return annualSalary;
     }
 
     public String toString(){
-
-
-        return String.format("Employee Name: %s %s \nMonthly Salary: $%.0f", firstName, lastName, monthlySalary);
+        return String.format("\nEmployee Name: %s %s \nMonthly Salary: %s", firstName, lastName, formatter.format(monthlySalary));
     }
-
 
 } // end Employee class

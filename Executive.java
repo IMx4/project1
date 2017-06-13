@@ -19,14 +19,13 @@ public class Executive extends Employee{
         double annualSalary = super.annualSalary();
 
         if (currentStockPrice >= 50){
-            annualSalary += BONUS;
+           annualSalary += BONUS;
         }
 
         return annualSalary;
     }
 
     public String toString(){
-
-        return super.toString() + String.format("Current Stock Price: $%.0f", currentStockPrice);
+        return super.toString() + String.format("\nCurrent Stock Price: %s", super.formatter.format(currentStockPrice));
     }
 }
